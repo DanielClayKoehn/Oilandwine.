@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oil & Wine</title>
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+
+<body class="bg-page bg-home">
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="brand">Oil & Wine</div>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </header>
+
+  <!-- MENU -->
+  <nav class="menu" id="menu">
+    <a href="/index.html">Home</a>
+    <a href="/poems.html">Poems</a>
+    <a href="/writings.html">Writings</a>
+    <a href="/quotes.html">Quotes</a>
+    <a href="/songs.html">Songs</a>
+  </nav>
+
+  <!-- PAGE CONTENT -->
+  <main class="page">
+    <div>
+      <h1 class="hero-title">Oil & Wine</h1>
+      <p class="hero-sub">Where words are poured and shared</p>
+
+      <section class="card">
+        <h2>Submit Your Writing</h2>
+
+        <form>
+          <label>Your Name (optional)</label>
+          <input type="text" placeholder="Anonymous" />
+
+          <label>Your Writing</label>
+          <textarea placeholder="Write here..."></textarea>
+
+          <label>Upload a PDF (optional)</label>
+          <input type="file" accept=".pdf" />
+
+          <div class="actions">
+            <button class="btn" type="button">Submit</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- MENU SCRIPT -->
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const menu = document.getElementById("menu");
+
+    menuBtn.addEventListener("click", () => {
+      menu.classList.toggle("open");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!menu.contains(e.target) && e.target !== menuBtn) {
+        menu.classList.remove("open");
+      }
+    });
+  </script>
+
+</body>
+</html>
