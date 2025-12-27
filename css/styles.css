@@ -1,0 +1,98 @@
+}
+
+.hero-sub {
+  font-family: "CalifornianSignature", cursive;
+  font-size: clamp(22px, 2.5vw, 42px);
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* =========================
+   CONTENT CARD
+   ========================= */
+.card {
+  margin-top: 30px;
+  width: min(720px, 92vw);
+  padding: 20px;
+  border-radius: 18px;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  text-align: left;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+label {
+  display: block;
+  margin: 12px 0 6px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(0,0,0,0.25);
+  color: var(--text);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+input[type="file"] {
+  margin-top: 8px;
+}
+
+.actions {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.08);
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: rgba(255,255,255,0.14);
+}
+
+.msg {
+  margin-top: 12px;
+  opacity: 0.9;
+}
+
+/* =========================
+   MOBILE FIXES
+   ========================= */
+@media (max-width: 768px) {
+  .bg-page {
+    background-attachment: scroll;
+  }
+
+  .brand {
+    font-size: 28px;
+  }
+
+  .hero-title {
+    font-size: 56px;
+  }
+
+  .hero-sub {
+    font-size: 28px;
+  }
+}
